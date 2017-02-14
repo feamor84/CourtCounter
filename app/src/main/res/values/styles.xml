@@ -8,4 +8,39 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--Style of base container-->
+    <style name="mainContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--TextViews-->
+    <style name="textView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!--Buttons-->
+    <style name="button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="button.plus3" parent="button">
+        <item name="android:text">@string/plus_3</item>
+    </style>
+
+    <style name="button.plus2" parent="button">
+        <item name="android:text">@string/plus_2</item>
+    </style>
+
+    <style name="button.freeThrow" parent="button">
+        <item name="android:text">@string/free_throw</item>
+    </style>
 </resources>
+
+
