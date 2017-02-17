@@ -8,22 +8,25 @@
     <TextView
         android:id="@+id/heading_team_a"
         style="@style/textView"
-        android:text="Team A" />
+        android:text="@string/team_a" />
 
     <TextView
         android:id="@+id/counter_team_a"
         style="@style/textView"
-        android:text="0" />
+        android:text="@string/_0" />
 
     <Button
-        style="@style/button.plus3"
-        android:onClick="addThreePoints"/>
+        style="@style/button"
+        android:onClick="addThreePoints"
+        android:text="@string/plus_3"/>
 
     <Button
-        style="@style/button.plus2"
-        android:onClick="addTwoPoints"/>
+        style="@style/button"
+        android:onClick="addTwoPoints"
+        android:text="@string/plus_2"/>
 
     <Button
-        style="@style/button.freeThrow"
-        android:onClick="addFreeThrow"/>
+        style="@style/button"
+        android:onClick="addFreeThrowPoints"
+        android:text="@string/free_throw"/>
 </LinearLayout>

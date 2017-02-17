@@ -30,17 +30,6 @@
         <item name="android:layout_margin">8dp</item>
     </style>
 
-    <style name="button.plus3" parent="button">
-        <item name="android:text">@string/plus_3</item>
-    </style>
-
-    <style name="button.plus2" parent="button">
-        <item name="android:text">@string/plus_2</item>
-    </style>
-
-    <style name="button.freeThrow" parent="button">
-        <item name="android:text">@string/free_throw</item>
-    </style>
 </resources>
 
 
