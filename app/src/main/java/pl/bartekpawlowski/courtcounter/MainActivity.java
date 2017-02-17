@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int scoreTeamA = 0;
+    private int scoreTeamB = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,15 +22,50 @@ public class MainActivity extends AppCompatActivity {
         containerForTeamA.setText(String.valueOf(score));
     }
 
+    public void displayForTeamB(int score) {
+        TextView containerFroTeamB = (TextView) findViewById(R.id.counter_team_b);
+        containerFroTeamB.setText(String.valueOf(score));
+    }
+
     public void addThreePoints(View view) {
-        displayForTeamA(3);
+        String team = view.getTag().toString();
+        switch (team){
+            case "A":
+                this.scoreTeamA = this.scoreTeamA + 3;
+                displayForTeamA(this.scoreTeamA);
+                break;
+            case "B":
+                this.scoreTeamB = this.scoreTeamB + 3;
+                displayForTeamB(this.scoreTeamB);
+                break;
+        }
     }
 
     public void addTwoPoints(View view) {
-        displayForTeamA(2);
+        String team = view.getTag().toString();
+        switch (team){
+            case "A":
+                this.scoreTeamA = this.scoreTeamA + 2;
+                displayForTeamA(this.scoreTeamA);
+                break;
+            case "B":
+                this.scoreTeamB = this.scoreTeamB + 2;
+                displayForTeamB(this.scoreTeamB);
+                break;
+        }
     }
 
     public void addFreeThrowPoints(View view) {
-        displayForTeamA(1);
+        String team = view.getTag().toString();
+        switch (team){
+            case "A":
+                this.scoreTeamA = this.scoreTeamA + 1;
+                displayForTeamA(this.scoreTeamA);
+                break;
+            case "B":
+                this.scoreTeamB = this.scoreTeamB + 1;
+                displayForTeamB(this.scoreTeamB);
+                break;
+        }
     }
 }
