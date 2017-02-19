@@ -3,4 +3,12 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="layout_width_zero">0dp</dimen>
+    <dimen name="team_container_padding">24dp</dimen>
+    <dimen name="team_text_size">14sp</dimen>
+    <dimen name="score_text_size">56sp</dimen>
+    <dimen name="score_padding_top">16dp</dimen>
+    <dimen name="score_padding_bottom">20dp</dimen>
+    <dimen name="button_top_bottom_padding">4dp</dimen>
+    <dimen name="button_reset_bottom_margin">32dp</dimen>
+    <dimen name="vertical_line_width">1dp</dimen>
 </resources>

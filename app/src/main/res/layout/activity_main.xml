@@ -1,77 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    style="@style/mainContainer"
+    style="@style/container"
     tools:context="pl.bartekpawlowski.courtcounter.MainActivity">
 
-    <LinearLayout
-        style="@style/teamContainer">
+    <LinearLayout style="@style/mainContainer">
 
-        <TextView
-            android:id="@+id/heading_team_a"
-            style="@style/textView"
-            android:text="@string/team_a" />
+        <LinearLayout style="@style/teamContainer">
 
-        <TextView
-            android:id="@+id/counter_team_a"
-            style="@style/textView"
-            android:text="@string/_0" />
+            <TextView
+                android:id="@+id/heading_team_a"
+                style="@style/textView.team"
+                android:text="@string/team_a" />
 
-        <Button
-            android:id="@+id/addThreePointsTeamA"
-            style="@style/button"
-            android:onClick="addThreePoints"
-            android:text="@string/plus_3"
-            android:tag="A"/>
+            <TextView
+                android:id="@+id/counter_team_a"
+                style="@style/textView.score"
+                android:text="@string/_0" />
 
-        <Button
-            android:id="@+id/addTwoPointsTeamA"
-            style="@style/button"
-            android:onClick="addTwoPoints"
-            android:text="@string/plus_2"
-            android:tag="A"/>
+            <Button
+                android:id="@+id/addThreePointsTeamA"
+                style="@style/button"
+                android:onClick="addThreePoints"
+                android:tag="A"
+                android:text="@string/plus_3" />
 
-        <Button
-            android:id="@+id/addFreeThrowPointsTeamA"
-            style="@style/button"
-            android:onClick="addFreeThrowPoints"
-            android:text="@string/free_throw"
-            android:tag="A"/>
+            <Button
+                android:id="@+id/addTwoPointsTeamA"
+                style="@style/button"
+                android:onClick="addTwoPoints"
+                android:tag="A"
+                android:text="@string/plus_2" />
+
+            <Button
+                android:id="@+id/addFreeThrowPointsTeamA"
+                style="@style/button"
+                android:onClick="addFreeThrowPoints"
+                android:tag="A"
+                android:text="@string/free_throw" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"/>
+
+        <LinearLayout style="@style/teamContainer">
+
+            <TextView
+                android:id="@+id/heading_team_b"
+                style="@style/textView.team"
+                android:text="@string/team_b" />
+
+            <TextView
+                android:id="@+id/counter_team_b"
+                style="@style/textView.score"
+                android:text="@string/_0" />
+
+            <Button
+                android:id="@+id/addThreePointsTeamB"
+                style="@style/button"
+                android:onClick="addThreePoints"
+                android:tag="B"
+                android:text="@string/plus_3" />
+
+            <Button
+                android:id="@+id/addTwoPointsTeamB"
+                style="@style/button"
+                android:onClick="addTwoPoints"
+                android:tag="B"
+                android:text="@string/plus_2" />
+
+            <Button
+                android:id="@+id/addFreeThrowPoints"
+                style="@style/button"
+                android:onClick="addFreeThrowPoints"
+                android:tag="B"
+                android:text="@string/free_throw" />
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        style="@style/teamContainer">
+    <Button
+        style="@style/button.reset"
+        android:onClick="resetPoints"
+        android:text="@string/reset"/>
 
-        <TextView
-            android:id="@+id/heading_team_b"
-            style="@style/textView"
-            android:text="@string/team_b" />
-
-        <TextView
-            android:id="@+id/counter_team_b"
-            style="@style/textView"
-            android:text="@string/_0" />
-
-        <Button
-            android:id="@+id/addThreePointsTeamB"
-            style="@style/button"
-            android:onClick="addThreePoints"
-            android:text="@string/plus_3"
-            android:tag="B"/>
-
-        <Button
-            android:id="@+id/addTwoPointsTeamB"
-            style="@style/button"
-            android:onClick="addTwoPoints"
-            android:text="@string/plus_2"
-            android:tag="B"/>
-
-        <Button
-            style="@style/button"
-            android:id="@+id/addFreeThrowPoints"
-            android:text="@string/free_throw"
-            android:onClick="addFreeThrowPoints"
-            android:tag="B"/>
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

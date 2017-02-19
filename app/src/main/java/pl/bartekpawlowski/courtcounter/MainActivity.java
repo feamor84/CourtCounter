@@ -8,13 +8,35 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int scoreTeamA = 0;
-    private int scoreTeamB = 0;
+    private int scoreTeamA;
+    private int scoreTeamB;
+    final static String SCORE_TEAM_A = "scoreTeamA";
+    final static String SCORE_TEAM_B = "scoreTeamB";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(savedInstanceState != null) {
+            this.scoreTeamA = savedInstanceState.getInt(this.SCORE_TEAM_A);
+            this.scoreTeamB = savedInstanceState.getInt(this.SCORE_TEAM_B);
+        } else {
+            this.scoreTeamA = 0;
+            this.scoreTeamB = 0;
+        }
+
         setContentView(R.layout.activity_main);
+
+        displayForTeamA(this.scoreTeamA);
+        displayForTeamB(this.scoreTeamB);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(this.SCORE_TEAM_A, this.scoreTeamA);
+        savedInstanceState.putInt(this.SCORE_TEAM_B, this.scoreTeamB);
+
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     public void displayForTeamA(int score) {
@@ -67,5 +89,11 @@ public class MainActivity extends AppCompatActivity {
                 displayForTeamB(this.scoreTeamB);
                 break;
         }
+    }
+
+    public void resetPoints(View view){
+        this.scoreTeamA = this.scoreTeamB = 0;
+        displayForTeamA(this.scoreTeamA);
+        displayForTeamB(this.scoreTeamB);
     }
 }

@@ -1,27 +1,35 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+            <!-- Primary theme color of the app (sets background color of app bar) -->
+            <item name="colorPrimary">#FF9800</item>
+            <!-- Background color of buttons in the app -->
+            <item name="colorButtonNormal">#FF9800</item>
     </style>
 
     <!--Style of base container-->
-    <style name="mainContainer">
+    <style name="container">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="mainContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
     </style>
 
     <!--Team container-->
     <style name="teamContainer">
         <item name="android:layout_width">@dimen/layout_width_zero</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/team_container_padding</item>
+        <item name="android:paddingRight">@dimen/team_container_padding</item>
     </style>
     <!--TextViews-->
     <style name="textView">
@@ -30,13 +38,41 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
+    <style name="textView.team" parent="textView">
+        <item name="android:textSize">@dimen/team_text_size</item>
+        <item name="android:textColor">@color/colorTeamText</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="textView.score" parent="textView">
+        <item name="android:textSize">@dimen/score_text_size</item>
+        <item name="android:textColor">@color/colorScoreText</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingTop">@dimen/score_padding_top</item>
+        <item name="android:paddingBottom">@dimen/score_padding_bottom</item>
+    </style>
+
     <!--Buttons-->
     <style name="button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:paddingTop">@dimen/button_top_bottom_padding</item>
+        <item name="android:paddingBottom">@dimen/button_top_bottom_padding</item>
     </style>
 
+    <style name="button.reset" parent="button">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/button_reset_bottom_margin</item>
+    </style>
+
+    <!--Vertical line-->
+    <style name="verticalLine">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/vertical_line_width</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
 </resources>
 
 
